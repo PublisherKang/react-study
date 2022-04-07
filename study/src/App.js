@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import ValidationSample from './ValidationSample.js';
+import ScrollBox from './ScrollBox.js';
+
+// import ValidationSample from './ValidationSample.js';
 // import Counter from './Counter.js';
 // import Say from './Say.js';
 // import EventPractice from './EventPractice.js';
@@ -11,10 +13,15 @@ import ValidationSample from './ValidationSample.js';
 //   return <EventPractice />;
 // };
 
-class App extends Component{
-  render(){
+class App extends Component {
+  render() {
     return (
-      <ValidationSample/>
+      <div>
+        <ScrollBox ref={(ref) => (this.scrollBox = ref)} />
+        <button onClick={() => this.scrollBox.scrollToBottom()}>
+          맨 밑으로
+        </button>
+      </div>
     );
   }
 }
