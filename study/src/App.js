@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 // import Counter from './Counter.js';
 // import Say from './Say.js';
-import EventPractice from './EventPractice.js';
+import IterationSample from './IterationSample.js';
 
 // const App = () => {
 //   return <Counter />;
 // };
-const App = () => {
-  return <EventPractice />;
-};
+class App extends Component {
+  render() {
+    return <IterationSample />;
+  }
+}
 
 export default App;
