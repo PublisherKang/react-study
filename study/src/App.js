@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 // import Say from './Say.js';
 // import IterationSample from './IterationSample.js';
 import LifeCycleSample from './LifeCycleSample.js';
+import ErrorBoundary from './ErrorBoundary';
 
 // const App = () => {
 //   return <Counter />;
@@ -28,7 +29,9 @@ class App extends Component {
     return (
       <div>
         <button onClick={this.handleClick}>랜덤 색상</button>
-        <LifeCycleSample color={this.state.color} />
+        <ErrorBoundary>
+          <LifeCycleSample color={this.state.color} />
+        </ErrorBoundary>
       </div>
     );
   }
